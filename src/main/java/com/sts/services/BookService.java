@@ -33,6 +33,7 @@ public class BookService {
 //		return book list;
 		
 		List<Book> book =(List<Book>)bookRepository.findAll(); //
+		
 		return book;
 	}
 	
@@ -45,7 +46,7 @@ public class BookService {
 		try {
 			
 //			book = list.stream().filter(e->e.getId()==id).findFirst().get();
-		      book = bookRepository.findById(id);
+		      Book findById = bookRepository.findById(id);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

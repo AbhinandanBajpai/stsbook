@@ -28,6 +28,7 @@ public class BookController {
 	public ResponseEntity<List<Book>> book() {
 		
 		List<Book> list = bookService.getAllBook();
+
 		
 		if(list.size()<=0) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
